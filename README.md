@@ -85,8 +85,10 @@ Before deploying code, ensure your local environment is ready:
   ```
 - **Server Identity**: Generate a dedicated address for the backend and fund it:
   ```bash
-  iota client new-address ed25519
-  iota client keytool <SERVER_ADDR>  # Extract the iotaprivkey...
+  iota client new-address
+  iota client switch --address <SERVER-ADDR>
+  iota client faucet #fund the address
+  iota keytool export <SERVER-ADDR>  # Extract the iotaprivkey...
   ```
 
 ### 2. Registry Smart Contracts
@@ -96,7 +98,7 @@ The foundation of the system is the User Registry.
    ```bash
    cd phloxCert_movePackages/register_contract
    iota move build
-   iota client publish --gas-budget 10000000
+   iota client publish --gas-budget 20000000
    ```
 3. **Capture IDs**: Note the **PackageID** and the **Registry ObjectID** from the output. These are required for all subsequent components.
 
@@ -112,8 +114,21 @@ The core notarization logic is provided by the official IOTA notarization repo.
 
 ### 4. Backend Deployment
 The bridge between the blockchain and the frontend.
-1. **Configure**: Navigate to `phloxCert_backend`, create a `.env` file, and fill in the IDs and `iotaprivkey` from previous steps.
-2. **Run**:
+1. **Clone**: `git clone https://github.com/PhloxCert/phloxCert_backend.git`
+2. **Configure**:
+   ```bash
+   cd phloxCert_backend
+   cp .env.example .env
+   ```
+   Then edit `.env` and set:
+- `PORT` → API port (default `8080`)
+- `IOTA_NODE_URL` → the IOTA node (e.g. `http://127.0.0.1:14265` or `http://localhost:9000`)
+- `PACKAGE_ID` → deployed Registry Move package ID
+- `REGISTRY_ID` → deployed registry object ID
+- `NOTARIZATION_PACKAGE_ID` → deployed notarization-move package ID
+- `PRIVATE_KEY` → A valid Ed25519 secret key for the server to spawn and sign Notarization transactions.
+
+3. **Run**:
    ```bash
    npm install
    npm run dev
@@ -121,8 +136,18 @@ The bridge between the blockchain and the frontend.
 
 ### 5. Frontend UI
 The final user-facing layer.
-1. **Configure**: Navigate to `phloxCert_frontend`, create a `.env` file, and set `VITE_PACKAGE_ID` and `VITE_REGISTRY_ID`.
-2. **Run**:
+1. **Clone**: `git clone https://github.com/PhloxCert/phloxCert_frontend.git`
+2. **Configure**:
+   ```bash
+   cd phloxCert_frontend
+   cp .env.example .env
+   ```
+   Then edit `.env` and set:
+    - `VITE_API_BASE_URL` → backend API URL (e.g. `http://localhost:8080`)
+    - `VITE_IOTA_NODE_URL` → local IOTA node (e.g. `http://127.0.0.1:9000`)
+    - `VITE_PACKAGE_ID` / `VITE_REGISTRY_ID` → the deployed registry contract
+  
+4. **Run**:
    ```bash
    npm install
    npm run dev
