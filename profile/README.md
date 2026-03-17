@@ -96,7 +96,7 @@ The foundation of the system is the User Registry.
    ```bash
    cd phloxCert_movePackages/register_contract
    iota move build
-   iota client publish --gas-budget 10000000
+   iota client publish --gas-budget 20000000
    ```
 3. **Capture IDs**: Note the **PackageID** and the **Registry ObjectID** from the output. These are required for all subsequent components.
 
