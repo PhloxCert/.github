@@ -85,8 +85,8 @@ Before deploying code, ensure your local environment is ready:
   ```
 - **Server Identity**: Generate a dedicated address for the backend and fund it:
   ```bash
-  iota client new-address ed25519
-  iota client keytool <SERVER_ADDR>  # Extract the iotaprivkey...
+  iota client new-address
+  iota keytool export <SERVER_ADDR>  # Extract the iotaprivkey...
   ```
 
 ### 2. Registry Smart Contracts
