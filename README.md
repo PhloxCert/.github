@@ -85,8 +85,8 @@ PhloxCert consists of a **Vite/React FRONTEND** for user interaction, an **Expre
 
 
 *(Dashboard Preview)*
-![Technician Dashboard Preview](../Technician_Dashboard.png)
-![Business Dashboard Preview](../Business_Dashboard.png)
+![Technician Dashboard Preview](/Technician_Dashboard.png)
+![Business Dashboard Preview](/Business_Dashboard.png)
 
 ---
 
