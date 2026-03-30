@@ -51,6 +51,8 @@ IOTA was chosen for its ability to handle frequent micro-data transactions witho
 
 ## 🏗 System Architecture
 
+![System Architecture](../SystemArchitecture.png)
+
 ### High-Level Design
 PhloxCert consists of a **Vite/React FRONTEND** for user interaction, an **Express/TypeScript BACKEND** for secure transaction handling and authentication, **ON Chain Contracts** on IOTA as the final arbiter of truth, and **PINATA** for decentralized file storage.
 
