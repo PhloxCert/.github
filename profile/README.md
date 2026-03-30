@@ -24,6 +24,38 @@ PhloxCert leverages the **IOTA Protocol** to provide a strictly mathematical "Ar
 - **Enforcement through Transparency**: Moving from "check-the-box" compliance to a verifiable, immutable audit trail.
 
 ---
+## 🚀 Value Proposition — PhloxCert
+
+**PhloxCert turns fire safety compliance into immutable, verifiable truth — protecting every stakeholder in the ecosystem.**
+
+### 👷 For Technicians
+
+- **Legal protection** — undeniable proof of what was recorded, when, and by whom  
+- **Non-repudiation** — inspection reports cannot be altered or deleted  
+- **Liability shield** — protection against disputes, cover-ups, or missing documentation  
+- **Faster workflows** — instant notarization replaces manual reporting  
+
+> You are no longer just reporting issues — you are proving them.
+
+
+### 🏢 For Businesses / Venues
+
+- **Verifiable compliance** — always up-to-date, tamper-proof safety records  
+- **Instant transparency** — customers and auditors can verify via QR code  
+- **Reduced risk** — lower exposure to fines, legal issues, and reputational damage  
+- **Audit-ready** — complete, immutable compliance history at any time  
+
+> 👉 From “trust us” to “verify us instantly.”
+
+### 👥 For Customers & the Public
+
+- **Real-time visibility** — check a venue’s safety status in seconds  
+- **Trust through transparency** — no hidden or manipulated data  
+- **Peace of mind** — safety checks are real, recent, and verifiable  
+
+> 👉 Safety becomes visible, not assumed.
+
+---
 
 ## ✨ Key Features
 
